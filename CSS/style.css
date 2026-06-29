@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* || UTILITY FEATURES*/
+.nowrap {
+  white-space: nowrap;
+}
+
+body {
+  font:
+    1.5rem "Nunito",
+    sans-serif;
+  background-image: radial-gradient(steelblue, #333);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: #001;
+  color: aliceblue;
+  text-align: center;
+}
+
+header {
+  top: 0;
+}
+footer {
+  bottom: 0;
+}
+
+nav {
+  padding: 0.5rem;
+  border-bottom: 2px double #001;
+  font-weight: 700;
+  background-color: azure;
+  color: #001;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a,
+nav a:visited {
+  color: #001;
+}
+nav a:focus,
+nav a:hover {
+  color: hsla(0, 0%, 20%, 0.6);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+/*PROFILE CARD CLASS*/
+
+.card {
+  scroll-margin-top: 7rem;
+  width: min(100%, 500px);
+  background-color: #cbd5e1;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card figure {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.card img {
+  border: 5px double #001;
+  border-radius: 50%;
+}
+.card figcaption {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.75rem;
+}
+@media (max-width: 480px) {
+  .nowrap {
+    white-space: normal; /* overrides nowrap on small screens */
+  }
+}
